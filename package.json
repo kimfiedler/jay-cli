@@ -1,0 +1,44 @@
+{
+  "name": "jay-cli",
+  "version": "0.1.0",
+  "description": "A small tool to manage and share scripts",
+  "source": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimfiedler/jay-cli.git"
+  },
+  "homepage": "https://github.com/kimfiedler/jay-cli",
+  "author": "Kim Fiedler Vestergaard",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf lib && babel src -d lib",
+    "watch": "babel src -d lib --watch",
+    "flow": "flow",
+    "test": "jest"
+  },
+  "bin": {
+    "jay": "lib/main.js",
+    "j": "lib/main.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.3",
+    "flow-bin": "^0.70.0",
+    "invariant": "^2.2.4",
+    "jest": "^22.4.3",
+    "rimraf": "^2.6.2"
+  },
+  "files": ["lib/"],
+  "dependencies": {
+    "editor": "^1.0.0",
+    "fs-extra": "^6.0.1",
+    "install-and-require": "^1.0.0",
+    "lodash": "^4.17.10",
+    "minimist": "^1.2.0",
+    "update-exported-object": "^1.0.1",
+    "yargs": "^11.0.0"
+  }
+}
